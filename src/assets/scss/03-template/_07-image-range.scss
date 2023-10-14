@@ -1,0 +1,102 @@
+/*----------------------------------------*/
+/*  2.7 - Image Range Style CSS
+/*----------------------------------------*/
+@mixin center() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+.image-range{
+    .innert-cob{
+        position: relative;
+        width: 100%;
+        height: 550px;
+        @media #{$tablet-device, $large-mobile} {
+          height: 400px;
+        }
+        @media #{$small-mobile} {
+          height: 300px;
+        }
+        &-title{
+          padding: 4px 15px;
+          background: $primary;
+          color: $white;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          position: absolute;
+          top: -30px;
+          &.left{
+            left: 0;
+          }
+          &.right{
+            right: 0;
+          }
+        }
+    }
+    .img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-size: 900px 100%;
+      }
+      .background-img {
+        background-image: url('../images/slider/next-slide.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      .foreground-img {
+        background-image: url('../images/slider/prev-slide.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 50%;
+        border-right: 2px solid $primary;
+      }
+      
+      .slider-image {
+        position: absolute;
+        appearance: none;
+        width: 100%;
+        height: 40px;
+        background: rgba(#f2f2f2, 0);
+        outline: none;
+        margin: 0;
+        transition: all .2s;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+        @include center;
+      }
+      
+      .slider-button {
+        $size: 40px;
+        pointer-events: none;
+        position: absolute;
+        width: $size;
+        height: $size;
+        border-radius: 50%;
+        background-color: $primary;
+        left: calc(50% - 18px);
+        top: calc(50% - 18px);
+        cursor: pointer;
+        @include center;
+        
+        @mixin arrow-helper() {
+          content: '';
+          padding: 3px;
+          display: inline-block;
+          border: solid $white;
+          border-width: 0 2px 2px 0;
+        }
+        &:after {
+          @include arrow-helper();
+          transform: rotate(-45deg);
+        }
+        &:before {
+          @include arrow-helper();
+          transform: rotate(135deg);
+        }
+      }
+}

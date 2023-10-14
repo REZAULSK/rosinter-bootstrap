@@ -1,0 +1,100 @@
+/*----------------------------------------*/
+/*  2.8 - Testimonial Style CSS
+/*----------------------------------------*/
+.testimonial{
+    &-wrapper{
+      & .heading{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 50px;
+        
+        @media #{$tablet-device, $large-mobile} {
+          margin-bottom: 30px;
+        }
+      }
+    }
+  
+    &-single{
+      // box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2);
+      background: $bg-one;
+      margin: 10px 0px 40px;
+      padding: 50px 40px 40px;
+      position: relative;
+      overflow: hidden;
+      @media #{$large-mobile} {
+        padding: 30px 20px 30px;
+      }
+    }
+    &-top {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    &-quote {
+      margin-bottom: 0px;
+      position: absolute;
+      left: 50%;
+      top: 120px;
+      transform: translateX(-50%);
+      width: 30px;
+      @media #{$large-mobile} {
+        top: 100px;
+      }
+    }
+    &-thumb {
+      border: 6px solid $white;
+      border-radius: 100%;
+    }
+    &-text {
+      position: relative;
+      margin-top: 30px;
+      color: #4d4d4d;
+      font-size: 18px;
+      @media #{$large-mobile} {
+        font-size: 16px;
+        margin-top: 25px;
+      }
+    }
+    &-content {
+      display: flex;
+      align-items: center;
+      margin-top: 25px;
+      gap: 20px;
+      justify-content: center;
+      @media #{$large-mobile} {
+        margin-top: 10px;
+      }
+    }
+    &-info {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      & .name {
+        font-size: 22px;
+        font-weight: 700;
+        @media #{$large-mobile} {
+          font-size: 20px;
+        }
+      }
+      .designation {
+        font-size: 14px;
+        letter-spacing: 2px;
+        @media #{$large-mobile} {
+          letter-spacing: 1px;
+        }
+      }
+    }
+    & .swiper-pagination{
+      bottom: 0;
+      &-bullet{
+        background: $dark;
+        &-active{
+          background: $primary !important;
+        }
+      }
+    }
+  }

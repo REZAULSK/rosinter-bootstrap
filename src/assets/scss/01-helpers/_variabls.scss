@@ -1,6 +1,5 @@
 // Font Family
-$poppins: 'Poppins', sans-serif;
-$opensans: 'Open Sans', sans-serif;
+$dm: 'DM Sans', sans-serif;
 
 // Responsive Variables
 $extraBig-device: "only screen and (min-width: 1550px)";
@@ -17,13 +16,13 @@ $extra-small-mobile: "only screen and (max-width: 479px)";
 //===============================
 
 // Color
-$primary: #322fb3;
+$primary: #FFA800;
 $secondary: #4fcbf1;
-$light: #def6fe;
+$light: #e1e1e1;
 $white: #ffffff;
-$dark: #343c55;
+$dark: #222222;
 $gray-100: #717788;
-$bg-one: #f2fbfe;
+$bg-one: #f6f6f6;
 
 // theme colors map
 $theme-colors: (
@@ -61,10 +60,10 @@ $grid-gutter-width: 30px;
 $transition-base: all 0.5s ease 0s;
 
 // Typography
-$font-family-base: $poppins;
+$font-family-base: $dm;
 $font-size-base: 1rem;
 $line-height-base: 1.75;
 //
-$headings-font-family: $poppins;
+$headings-font-family: $dm;
 $headings-font-weight: 600;
 $headings-line-height: 1.2;

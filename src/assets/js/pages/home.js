@@ -1,34 +1,19 @@
 (function ($) {
   "use strict";
 
-/*---------------------------
-    Hero Slider One Activation
-  -----------------------------------*/
-  var swiper = new Swiper(".sliderone", {
-    slidesPerView: 1,
-    spaceBetween: 30,
-    centeredSlides: true,
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-    
-    navigation: {
-      nextEl: '.sliderone .swiper-button-next',
-      prevEl: '.sliderone .swiper-button-prev'
-  },
-  });
-
   /*---------------------------
-    Hero Slider Two Activation
+    Hero Slider Activation
   -----------------------------------*/
-  var swiper = new Swiper(".slidertwo", {
+  var swiper = new Swiper(".slider", {
     slidesPerView: 1,
     spaceBetween: 30,
     centeredSlides: true,
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
+      renderBullet: function (index, className) {
+        return '<span class="' + className + '">' + '0' + (index + 1) + "</span>";
+      },
     },
     
     navigation: false
@@ -77,153 +62,49 @@ if( $('.odometer').length ){
 /*---------------------------
 Testimonial Activation
 -----------------------------------*/
-var swiper = new Swiper(".testimonialone", {
-slidesPerView: 1,
+var swiper = new Swiper(".testimonial-slider", {
+slidesPerView: 3,
 loop:true,
+spaceBetween:16,
 pagination: false,
 allowTouchMove: true,
 navigation: false,
 pagination: {
   el: ".swiper-pagination",
   clickable: true,
+},
+breakpoints:{
+  0: {
+    slidesPerView: 1
+  },
+  480: {
+    slidesPerView: 2
+  },
+  768: {
+    slidesPerView: 2
+  },
+  992: {
+    slidesPerView: 3
+  },
+  1200: {
+    slidesPerView: 3
+  }
 }
 });
-/*---------------------------
-Testimonial Two Activation
------------------------------------*/
-var swiper = new Swiper(".testimonialtwo",{
-  loop:true,
-  autoplay:false,
-  slidesPerView:3,
-  pagination:false,
-  navigation: {
-    nextEl: ".testimonial-slider-button-next",
-    prevEl: ".testimonial-slider-button-prev",
-  },
-  breakpoints:{
-    0: {
-      slidesPerView: 1
-    },
-    480: {
-      slidesPerView: 1
-    },
-    768: {
-      slidesPerView: 2
-    },
-    992: {
-      slidesPerView: 2
-    },
-    1200: {
-      slidesPerView: 3
-    }
-  }
-})
-/*---------------------------
-Vertical Testimonial Activation
------------------------------------*/
-var swiper = new Swiper(".vertical-testimonial", {
-  loop:true,
-  pagination: true,
-  allowTouchMove: true,
-  navigation: false,
-  direction: "vertical",
-  slidesPerView: 2,
-  mousewheel: true,
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-  breakpoints:{
-    0: {
-      slidesPerView: 1
-    },
-    480: {
-      slidesPerView: 2
-    }
-  }
-});
-/*---------------------------
-  Brand Slider Activation
------------------------------------*/
-var swiper = new Swiper(".brand-slider",{
-  loop:true,
-  speed:800,
-  autoplay:false,
-  slidesPerView:5,
-  spaceBetween:0,
-  pagination:false,
-  navigation:false,
-  breakpoints:{
-    0: {
-      slidesPerView: 2,
-      spaceBetween: 80,
-    },
-    480: {
-      slidesPerView: 2,
-      spaceBetween: 80,
-    },
-    768: {
-      slidesPerView: 3,
-      spaceBetween: 80,
-    },
-    992: {
-      slidesPerView: 3,
-      spaceBetween: 80,
-    },
-    1200: {
-      slidesPerView: 5,
-      spaceBetween: 80,
-    }
-  }
-})
-/*---------------------------
-  Brand Slider Two Activation
------------------------------------*/
-var swiper = new Swiper(".brand-slider-two",{
-  loop:true,
-  speed:800,
-  autoplay:false,
-  slidesPerView:4,
-  spaceBetween:0,
-  pagination:false,
-  navigation:false,
-  breakpoints:{
-    0: {
-      slidesPerView: 2,
-      spaceBetween: 20,
-    },
-    480: {
-      slidesPerView: 2,
-      spaceBetween: 60,
-    },
-    768: {
-      slidesPerView: 3,
-      spaceBetween: 80,
-    },
-    992: {
-      slidesPerView: 3,
-      spaceBetween: 100,
-    },
-    1200: {
-      slidesPerView: 4,
-      spaceBetween: 110,
-    }
-  }
-})
 
 /*---------------------------
-  Work Carousel Activation
+  Project Carousel Activation
 -----------------------------------*/
-var swiper = new Swiper(".work-carousel",{
+var swiper = new Swiper(".project-carousel",{
   loop:true,
   speed:800,
   autoplay:false,
   slidesPerView:4,
-  spaceBetween:20,
+  spaceBetween:10,
   pagination:false,  
   navigation: {
-    nextEl: '.work-carousel-wrapper .swiper-btn-next',
-    prevEl: '.work-carousel-wrapper .swiper-btn-prev',
+    nextEl: '.project-carousel-wrapper .swiper-btn-next',
+    prevEl: '.project-carousel-wrapper .swiper-btn-prev',
   },
   breakpoints:{
     0: {
@@ -252,7 +133,6 @@ $('.video-popup').fancybox();
   /*--
   Skillbar Instance
 -----------------------------------*/
-
 var deferJs = {
   i: function (e) {
       deferJs.d();

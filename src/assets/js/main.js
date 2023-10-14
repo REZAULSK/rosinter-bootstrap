@@ -27,6 +27,17 @@
       $this.css('background-color', $color);
   });
 
+
+  $("#slider-image").on("input change", (e)=>{
+    const sliderPos = e.target.value;
+    if (sliderPos > 50) {
+      $('.foreground-img').css('width', `${sliderPos}%`)
+      $('.slider-button').css('left', `calc(${sliderPos}% - 18px)`)
+    } else{
+      $('.foreground-img').css('width', `${sliderPos - 1}%`)
+      $('.slider-button').css('left', `calc(${sliderPos}% - 32px)`)
+    }
+  });
 /*---------------------------------
   Parallax Instance
 -----------------------------------*/

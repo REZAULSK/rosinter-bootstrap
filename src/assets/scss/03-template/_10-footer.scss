@@ -1,0 +1,116 @@
+/*----------------------------------------*/
+/*  2.11 - Footer Style CSS
+/*----------------------------------------*/
+.footer{
+    background: $dark;
+
+    &-widget{
+        & .title{
+            color: #fff;
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        &-hello{
+            display: flex;
+            flex-direction: column;
+            & .mail{
+                color: #e5e5e5;
+                font-size: 16px;
+                &:hover{
+                    color: $primary;
+                }
+            }
+            & .call{
+                color: #e5e5e5;
+                font-size: 20px;
+                margin-top: 5px;
+                &:hover{
+                    color: $primary;
+                }
+            }
+        }
+
+        &-menu{
+            & li {
+                margin-bottom: 5px;
+                display: block;
+                &:last-child{
+                    margin-bottom: 0;
+                }
+                & a {
+                    font-size: 16px;
+                    color: #e5e5e5;
+                    @media #{$tablet-device, $large-mobile} {
+                        font-size: 14px;
+                    }
+                    &:hover{
+                        color: $primary;
+                    }
+                }
+            }
+        }
+
+        &-address{
+            & p{
+                font-size: 16px;
+                color: #e5e5e5;
+                @media #{$tablet-device, $large-mobile} {
+                    font-size: 14px;
+                }
+            }
+        }
+
+        &-form-wrapper{
+            & .subscribe-form{
+                position: relative;
+                height: 40px;
+                margin-top: 40px;
+                & .email{
+                    background: transparent;
+                    border-bottom: 1px solid #e5e5e5;
+                    width: 100%;
+                    border-right: 0px;
+                    border-left: 0px;
+                    border-top: 0px;
+                    height: 40px;
+                    color: #e5e5e5;
+                    &::placeholder{
+                        color: #999999
+                    }
+                }
+                & .button{
+                    position: absolute;
+                    top: 50%;
+                    right: 0;
+                    transform: translateY(-50%);
+                    border: 0;
+                    box-shadow: none;
+                }
+            }
+        }
+    }
+
+    &-bottom{
+        margin-top: 80px;
+        padding: 40px 0;
+        border-top: 1px solid #444444;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        @media #{$tablet-device, $large-mobile} {
+            margin-top: 60px;
+            padding: 20px 0;
+        }
+        @media #{$small-mobile} {
+            flex-direction: column;
+            text-align: center;
+        }
+        & .copyright-line{
+            color: #e5e5e5;
+            font-size: 14px;
+        }
+    }
+}

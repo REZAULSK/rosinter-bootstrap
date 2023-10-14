@@ -7,9 +7,10 @@ html {
 	border: 0px !important;
 }
 body {
-	font-family: $poppins;
+	font-family: $dm;
 	font-size: 15px;
 
+	color: $dark;
 	background-color: #ffffff;
 }
 
@@ -25,6 +26,7 @@ button {
   
 a:hover {
 	text-decoration: none; 
+	color: $primary;
 }
   
 button:focus,
@@ -68,9 +70,8 @@ li {
 p {
 	font-size: 16px;
 	font-weight: normal;
-	color: $gray-100;
 	margin-bottom: 15px; 
-	font-family: $opensans;
+	font-family: $dm;
 
 	&:last-child{
 		margin-bottom: 0px;
@@ -145,21 +146,6 @@ hr {
 	align-items: center;
 	justify-content: center;
 }
-.gradient-1{
-	background: #322fb3;
-	background: linear-gradient(-45deg, #5BCFF2 20%, #417DD2 50%, #322fb3 100%);
-}
-.gradient-2{
-	background: #4facfe;
-	background: linear-gradient(-45deg, #00f2fe 0%, #28CFFE 50%, #4facfe 100%);
-}
-.gradient-text-1{
-	background: #322FB3;
-	background: linear-gradient(to right, #322FB3 39%, #4fcbf1 60%);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-
-}
 /* Section Heading */
 
 /* Section Spacing */
@@ -196,24 +182,18 @@ hr {
 	}
 }
 .custom-container{
-	max-width: 1450px;
-	width: 100%;
-	@media only screen and (min-width:1800px) {
-		margin: 0 100px 0 auto;
+	& .container-fluid{
+		padding: 0 45px 0;
+		@media #{$tablet-device} {
+			padding: 0 15px 0;
+		}
+		@media #{$large-mobile} {
+			padding: 0 15px 0;
+		}
 	}
-	@media only screen and (min-width: 1700px) and (max-width: 1799px) {
-		margin: 0 100px 0 auto;
-	}
-	@media only screen and (min-width: 1550px) and (max-width: 1699px) {
-		margin: 0 80px 0 auto;
-		max-width: 1300px;
-	}
-	@media only screen and (min-width: 1300px) and (max-width: 1549px) {
-		margin: 0 30px 0 auto;
-		max-width: 1200px;
-	}
-	@media only screen and (min-width: 320px) and (max-width: 1299px) {
-		margin: 0 auto 0;
+	&-two{
+		position: relative;
+		overflow: hidden;
 	}
 }
 /* Spacing */

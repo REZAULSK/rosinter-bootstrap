@@ -1,3 +1,31 @@
 /*----------------------------------------*/
 /*  1.3 Heading Styles CSS
 /*----------------------------------------*/
+.heading{
+    & .subtitle{
+        font-size: 18px;
+        font-family: $dm;
+        font-weight: 500;
+        
+        @media #{$tablet-device, $large-mobile} {
+            font-size: 16px;
+        }
+    }
+    & .title{
+        font-size: 48px;
+        font-family: $dm;
+        font-weight: 600;
+        margin-top: 5px;
+        letter-spacing: 2px;
+
+        @media #{$tablet-device} {
+            font-size: 36px;
+            margin-top: 0px;
+        }
+        @media #{$large-mobile} {
+            font-size: 30px;
+            letter-spacing: 1px;
+            margin-top: 0px;
+        }
+    }
+}

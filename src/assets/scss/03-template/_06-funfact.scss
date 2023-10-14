@@ -1,0 +1,47 @@
+/*----------------------------------------*/
+/*  2.6 - Funfact Style CSS
+/*----------------------------------------*/
+.funfact{
+  padding: 100px 0 95px;
+    @media #{$tablet-device} {
+        padding: 70px 0 65px;
+    }
+    @media #{$large-mobile} {
+        padding: 50px 0 55px;
+    }
+    &-inner{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        & .odometer{
+            font-size: 100px;
+            font-weight: 600;
+            line-height: 1;
+            color: #eeeeee;
+            padding-right: 3px;
+            overflow: hidden;
+            @media #{$tablet-device} {
+                font-size: 80px;
+            }
+            @media #{$large-mobile} {
+                font-size: 60px;
+            }
+        }
+    }
+    &-content{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        & .text{
+            font-size: 18px;
+            font-weight: 700;
+            @media #{$large-mobile} {
+                font-size: 16px;
+            }
+        }
+    }
+    &-single{
+        position: relative;
+    }
+}

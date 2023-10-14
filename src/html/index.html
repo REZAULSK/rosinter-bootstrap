@@ -5,97 +5,186 @@
 
 <body>
 
-    <header class="header-wrapper header-one sticky-header">
-        <div class="custom-costainer">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="flex-center justify-content-between">
-                            <!-- Header Logo Start -->
-                            <div class="logo">
-                                <a href="index.html">
-                                    <img class="logo-1" src="assets/images/logo.png" alt="logoImage">
-                                    <img class="logo-2" src="assets/images/logo-2.png" alt="logoImage">
-                                </a>
-                            </div>
-                            <!-- Header Logo End -->
+    <div class="top-wrapper">
 
-                            <div class="flex-center header-right">
-                                <!-- Header Menu Start -->
-                                <div class="d-none d-lg-flex header-right_menu">
-                                    @@include('mainmenu.html')
-                                </div>
-                                <!-- Header Menu End -->
-
-                                <!-- Header Actions Start -->
-                                <div class="header-right_actions flex-center">
-                                    <div class="header-right_button header-button">
-                                        <a href="contact.html" class="btn-style-one"><span>Get Started</span></a>
-                                    </div>
-
-                                    <div class="hamburger d-block d-lg-none">
-                                        <!-- Mobile Menu Hambarger Action Button Start -->
-                                        <a class="header-action-btn header-action-btn-menu hamburger_button d-flex" href="#/"  data-bs-toggle="offcanvas" data-bs-target="#offcanvas-header">
-                                            <span></span>
-                                            <span></span>
-                                            <span></span>
+        <header class="header-wrapper header-one sticky-header">
+            <div class="custom-container">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="flex-center justify-content-between">
+                                <div class="flex-center header-left">
+                                    <!-- Header Logo Start -->
+                                    <div class="logo">
+                                        <a href="index.html">
+                                            <img class="logo-1" src="assets/images/logo.png" alt="logoImage">
+                                            <img class="logo-2" src="assets/images/logo-2.png" alt="logoImage">
                                         </a>
-                                        <!-- Mobile Menu Hambarger Action Button End -->
                                     </div>
+                                    <!-- Header Logo End -->
 
+                                    <!-- Header Menu Start -->
+                                    <div class="d-none d-lg-flex header-right_menu">
+                                        @@include('mainmenu.html')
+                                    </div>
+                                    <!-- Header Menu End -->
                                 </div>
-                                <!-- Header Social Actions End -->
+                                <div class="flex-center header-right">
+                                    <!-- Header Actions Start -->
+                                    <div class="header-right_actions flex-center">
+                                        <div class="header-right_button">
+                                            <a href=""><i class="fas fa-search"></i></a>
+                                            <a href="#/" class="d-none d-lg-block" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-header2"><i class="fas fa-stream"></i></a>
+                                        </div>
+
+                                        <div class="hamburger d-block d-lg-none">
+                                            <!-- Mobile Menu Hambarger Action Button Start -->
+                                            <a class="header-action-btn header-action-btn-menu hamburger_button d-flex" href="#/"  data-bs-toggle="offcanvas" data-bs-target="#offcanvas-header">
+                                                <span></span>
+                                                <span></span>
+                                                <span></span>
+                                            </a>
+                                            <!-- Mobile Menu Hambarger Action Button End -->
+                                        </div>
+
+                                    </div>
+                                    <!-- Header Social Actions End -->
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+        </header>
+
+        <!-- Mobile Menu Offcanvas Start -->
+        <div class="offcanvas offcanvas-end" id="offcanvas-header">
+
+            <div class="offcanvas-header">
+                <!-- Header Logo Start -->
+                @@include('logo.html')
+                <!-- Header Logo End -->
+                <button type="button" class="btn-close text-reset mobilemenu-close" data-bs-dismiss="offcanvas" aria-label="Close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="offcanvas-body">
+                <!-- mobile menu navigation start -->
+                @@include('mobilemenu.html')
+                <!-- mobile menu navigation end -->
+            </div>
+
         </div>
-    </header>
+        <!-- Mobile Menu Offcanvas End -->
 
-    <div class="offcanvas offcanvas-end" id="offcanvas-header">
+        <!-- Common Offcanvas Start -->
+        <div class="offcanvas offcanvas-end offcanvas-common" id="offcanvas-header2">
 
-        <div class="offcanvas-header">
-            <!-- Header Logo Start -->
-            @@include('logo.html')
-            <!-- Header Logo End -->
-            <button type="button" class="btn-close text-reset mobilemenu-close" data-bs-dismiss="offcanvas" aria-label="Close"><i class="fas fa-times"></i></button>
+            <div class="offcanvas-header">
+                <!-- Header Logo Start -->
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="assets/images/logo-white.png" alt="">
+                    </a>
+                </div>
+                <!-- Header Logo End -->
+                <button type="button" class="btn-close text-white" data-bs-dismiss="offcanvas" aria-label="Close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="offcanvas-body">
+                <p class="offcanvas-body-text">We need to clarify for you the misconceptions surrounding the idea of denouncing all seeds.</p>
+                <img src="assets/images/others/offcanvas.png" alt="">
+                <div class="offcanvas-body-contact">
+                    <ul class="info">
+                        <li>
+                            <span>Phone:</span>
+                            <a href="tel:1234567890">+012 3456 789</a>
+                        </li>
+                        <li>
+                            <span>Email</span>
+                            <a href="mailto:hello@rosinter.com">hello@rosinter.com</a>
+                        </li>
+                    </ul>
+                    <ul class="social">
+                        <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href=""><i class="fab fa-skype"></i></a></li>
+                        <li><a href=""><i class="fab fa-linkedin-in"></i></a></li>
+                        <li><a href=""><i class="fab fa-instagram"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+
         </div>
-        <div class="offcanvas-body">
-            <!-- mobile menu navigation start -->
-            @@include('mobilemenu.html')
-            <!-- mobile menu navigation end -->
-        </div>
+        <!-- Common Offcanvas End -->
 
-    </div>
+        <!-- Slider Section start -->
+        <div class="swiper slider animation-style-01">
+            <div class="swiper-wrapper">
 
-    <!-- Slider Section start -->
-    <div class="slider-one">
-        
-        <div class="custom-container">
-            <div class="swiper sliderone animation-style-01">
-                <div class="swiper-wrapper">
+                <div class="swiper-slide">
 
-                    <div class="swiper-slide">
-                        <!-- Single Slider Start -->
-                        <div class="sliderone-slingle">
-                            <div class="slider-content-wrapper">
-                                <div class="sliderone-content">
+                    <div class="custom-container">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-lg-3 align-self-center">
 
                                     <!-- Slider Content Start -->
                                     <div class="slider-content">
-                                        <span class="subtitle">We Are Nayna</span>
-                                        <h2 class="title">Customized & Best Corporate Solutions</h2>
-                                        <a href="service-details.html" class="btn-style-two">Read More</a>
-                                        <div class="call">
-                                            <span>call us</span>
-                                            <a href="">+8801 234 567 890</a>
-                                        </div>
+                                        <span class="subtitle">Interior</span>
+                                        <h2 class="title">Made Easy Design</h2>
+                                        <a href="contact.html" class="btn-style-one"> 
+                                            <span>Get in Touch</span> 
+                                        </a>
                                     </div>
                                     <!-- Slider Content End -->
 
+                                </div>
+                                <div class="col-lg-9">
+
                                     <!-- Slider Image Start -->
                                     <div class="slider-image">
+                                        <div class="slider-image-two">
+                                            <img src="assets/images/slider/slider1-3.png" alt="Slider Image">
+                                        </div>
+                                        <div class="slider-image-one">
+                                            <img src="assets/images/slider/slider1-4.png" alt="Slider Image">
+                                        </div>
+                                    </div>
+                                    <!-- Slider Image End -->
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="swiper-slide">
+
+                    <div class="custom-container">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-lg-3 align-self-center">
+
+                                    <!-- Slider Content Start -->
+                                    <div class="slider-content">
+                                        <span class="subtitle">Interior</span>
+                                        <h1 class="title">Made Easy Design</h1>
+                                        <a href="contact.html" class="btn-style-one"> 
+                                            <span>Get in Touch</span> 
+                                        </a>
+                                    </div>
+                                    <!-- Slider Content End -->
+
+                                </div>
+                                <div class="col-lg-9">
+
+                                    <!-- Slider Image Start -->
+                                    <div class="slider-image">
+                                        <div class="slider-image-two">
+                                            <img src="assets/images/slider/slider1-2.png" alt="Slider Image">
+                                        </div>
                                         <div class="slider-image-one">
                                             <img src="assets/images/slider/slider1-1.png" alt="Slider Image">
                                         </div>
@@ -105,103 +194,718 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- Single Slider End -->
                     </div>
+
+                </div>
+        
+            </div>
+
+            <!-- Swiper Pagination -->
+            <div class="swiper-pagination slider-pagination">1</div>
+        </div>
+        <!-- Slider Section End -->
+
+    </div>
+
+    <!-- About Us Section Start -->
+    <div class="about section-margin">
+        <div class="container">
+            <div class="row mb-n30">
+                <div class="col-lg-5 mb-30">
+                    <!-- About Content Start -->
+                    <div class="about-content">
+
+                        <!-- Heading Start -->
+                        <div class="heading">
+                            <span class="subtitle">About</span>
+                            <h2 class="title">About Us</h2>
+                        </div>
+                        <!-- Heading End -->
+
+                        <!-- Content List Start -->
+                        <ul class="about-content-list">
+                            <li>
+                                <span>01</span>
+                                <h4 class="title">Material Variety</h4>
+                                <p class="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.a</p>
+                            </li>
+                            <li>
+                                <span>02</span>
+                                <h4 class="title">Kitchen Design</h4>
+                                <p class="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.a</p>
+                            </li>
+                        </ul>
+                        <!-- Content List End -->
+
+                        <a href="about.html" class="btn-style-two">About Us</a>
+
+                    </div>
+                    <!-- About Content End -->
+                </div>
+                <div class="col-lg-7 mb-30">
                     
+                    <!-- About Images Start -->
+                    <div class="about-images">
+                        <div class="about-images-one">
+                            <img src="assets/images/about/about-1.png" alt="About">
+                        </div>
+                        <div class="about-images-two">
+                            <img src="assets/images/about/about-2.png" alt="About">
+                        </div>
+                        <div class="about-images-three">
+                            <img src="assets/images/about/shape-1.png" alt="About">
+                        </div>
+                    </div>
+                    <!-- About Images End -->
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About Us Section End -->
+
+    <!-- Project Section Start -->
+    <div class="project">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+
+                    <!-- Project Heading Start -->
+                    <div class="project-heading-wrapper">
+                        <!-- Heading Start -->
+                        <div class="heading">
+                            <span class="subtitle">Projects</span>
+                            <h2 class="title">New Projects.</h2>
+                        </div>
+                        <!-- Heading End -->
+
+                        <!-- More Button Start -->
+                        <a href="service.html" class="more-btn">
+                            <span>More</span>
+                            <img class="more-btn-icon more-btn-icon-1" src="assets/images/others/arrow-1.png" alt="">
+                            <img class="more-btn-icon more-btn-icon-2" src="assets/images/others/arrow-2.png" alt="">
+                        </a>
+                        <!-- More Button End -->
+                    </div>
+                    <!-- Project Heading End -->
+
+                </div>
+            </div>
+        </div>
+        <div class="custom-containr-two">
+            <div class="swiper project-carousel">
+                <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                        <!-- Single Slider Start -->
-                        <div class="sliderone-slingle">
-                            <div class="slider-content-wrapper">
-                                <div class="sliderone-content">
-
-                                    <!-- Slider Content Start -->
-                                    <div class="slider-content">
-                                        <span class="subtitle">We Are Nayna</span>
-                                        <h2 class="title">Customized & Best Corporate Solutions</h2>
-                                        <a href="service-details.html" class="btn-style-two">Read More</a>
-                                        <div class="call">
-                                            <span>call us</span>
-                                            <a href="">+8801 234 567 890</a>
-                                        </div>
-                                    </div>
-                                    <!-- Slider Content End -->
-
-                                    <!-- Slider Image Start -->
-                                    <div class="slider-image">
-                                        <div class="slider-image-one">
-                                            <img src="assets/images/slider/slider1-2.png" alt="Slider Image">
-                                        </div>
-                                    </div>
-                                    <!-- Slider Image End -->
-
-                                </div>
+                        <!-- Project Single Slide Start -->
+                        <div class="project-carousel-single">
+                            <img src="assets/images/project/1.png" alt="project">
+                            <div class="project-carousel-content">
+                                <span class="category">Design</span>
+                                <h4 class="title"> <a href="project-details.html">Cool Kitchen Chambers</a> </h4>
                             </div>
                         </div>
-                        <!-- Single Slider End -->
+                        <!-- Project Single Slide End -->
                     </div>
-                    
                     <div class="swiper-slide">
-                        <!-- Single Slider Start -->
-                        <div class="sliderone-slingle">
-                            <div class="slider-content-wrapper">
-                                <div class="sliderone-content">
-
-                                    <!-- Slider Content Start -->
-                                    <div class="slider-content">
-                                        <span class="subtitle">We Are Nayna</span>
-                                        <h2 class="title">Customized & Best Corporate Solutions</h2>
-                                        <a href="service-details.html" class="btn-style-two">Read More</a>
-                                        <div class="call">
-                                            <span>call us</span>
-                                            <a href="">+8801 234 567 890</a>
-                                        </div>
-                                    </div>
-                                    <!-- Slider Content End -->
-
-                                    <!-- Slider Image Start -->
-                                    <div class="slider-image">
-                                        <div class="slider-image-one">
-                                            <img src="assets/images/slider/slider1-3.png" alt="Slider Image">
-                                        </div>
-                                    </div>
-                                    <!-- Slider Image End -->
-
-                                </div>
+                        <!-- Project Single Slide Start -->
+                        <div class="project-carousel-single">
+                            <img src="assets/images/project/2.png" alt="project">
+                            <div class="project-carousel-content">
+                                <span class="category">Design</span>
+                                <h4 class="title"> <a href="project-details.html">Office Design Partners</a> </h4>
                             </div>
                         </div>
-                        <!-- Single Slider End -->
+                        <!-- Project Single Slide End -->
                     </div>
-            
+                    <div class="swiper-slide">
+                        <!-- Project Single Slide Start -->
+                        <div class="project-carousel-single">
+                            <img src="assets/images/project/3.png" alt="project">
+                            <div class="project-carousel-content">
+                                <span class="category">Design</span>
+                                <h4 class="title"> <a href="project-details.html">Fine Design Interiors</a> </h4>
+                            </div>
+                        </div>
+                        <!-- Project Single Slide End -->
+                    </div>
+                    <div class="swiper-slide">
+                        <!-- Project Single Slide Start -->
+                        <div class="project-carousel-single">
+                            <img src="assets/images/project/4.png" alt="project">
+                            <div class="project-carousel-content">
+                                <span class="category">Design</span>
+                                <h4 class="title"> <a href="project-details.html">Crafty Cafe Design</a> </h4>
+                            </div>
+                        </div>
+                        <!-- Project Single Slide End -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Project Section End -->
+
+    <!-- Service Section Start -->
+    <div class="service section-margin-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+
+                    <!-- Service Heading Start -->
+                    <div class="service-heading-wrapper">
+
+                        <!-- Heading Start -->
+                        <div class="heading">
+                            <span class="subtitle">Services</span>
+                            <h2 class="title">Our Popular Services.</h2>
+                        </div>
+                        <!-- Heading End -->
+
+                        <!-- More Button Start -->
+                        <a href="service.html" class="more-btn">
+                            <span>More</span>
+                            <img class="more-btn-icon more-btn-icon-1" src="assets/images/others/arrow-1.png" alt="">
+                            <img class="more-btn-icon more-btn-icon-2" src="assets/images/others/arrow-2.png" alt="">
+                        </a>
+                        <!-- More Button End -->
+
+                    </div>
+                    <!-- Service Heading End -->
+
                 </div>
 
-                <!-- Swiper Pagination -->
-                <div class="swiper-pagination sliderone-pagination"></div>
+                <div class="col-12">
 
-                <!-- Swiper Navigation -->
-                <div class="custom-container button-container d-none d-lg-flex">
-                    <div class="container-fluid">
-                        <div class="swiper-button">
-                            <div class="swiper-button-prev">
-                                <div class="prev-arrow">
-                                    <img class="prev-arrow-1" src="assets/images/slider/arrow-1.png" alt="">
-                                    <img class="prev-arrow-2" src="assets/images/slider/arrow-2.png" alt="">
+                    <!-- Service Tab List Start -->
+                    <div class="service-tabs">
+                        <ul class="nav nav-tabs mb-3" id="ex1" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <a class="nav-link active" id="ex1-tab-1" data-bs-toggle="tab" href="#ex1-tabs-1" role="tab" aria-controls="ex1-tabs-1" aria-selected="true">
+                                    <div class="nav-icon">
+                                        <div class="nav-icon-group">
+                                            <img class="first" src="assets/images/service/icon/6.png" alt="">
+                                            <img class="second" src="assets/images/service/icon/6-1.png" alt="">
+                                        </div>
+                                        <span class="nav-icon-number">01</span>
+                                    </div>
+                                    <h5 class="nav-title">Furniture Layout</h5>
+                                </a>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <a class="nav-link" id="ex1-tab-2" data-bs-toggle="tab" href="#ex1-tabs-2" role="tab" aria-controls="ex1-tabs-2" aria-selected="false">
+                                    <div class="nav-icon">
+                                        <div class="nav-icon-group">
+                                            <img class="first" src="assets/images/service/icon/2.png" alt="">
+                                            <img class="second" src="assets/images/service/icon/2-1.png" alt="">
+                                        </div>
+                                        <span class="nav-icon-number">02</span>
+                                    </div>
+                                    <h5 class="nav-title">Modular Kitchen</h5>
+                                </a>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <a class="nav-link" id="ex1-tab-3" data-bs-toggle="tab" href="#ex1-tabs-3" role="tab" aria-controls="ex1-tabs-3" aria-selected="false">
+                                    <div class="nav-icon">
+                                        <div class="nav-icon-group">
+                                            <img class="first" src="assets/images/service/icon/3.png" alt="">
+                                            <img class="second" src="assets/images/service/icon/3-1.png" alt="">
+                                        </div>
+                                        <span class="nav-icon-number">03</span>
+                                    </div>
+                                    <h5 class="nav-title">Painting Pattern</h5>
+                                </a>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <a class="nav-link" id="ex1-tab-4" data-bs-toggle="tab" href="#ex1-tabs-4" role="tab" aria-controls="ex1-tabs-4" aria-selected="false">
+                                    <div class="nav-icon">
+                                        <div class="nav-icon-group">
+                                            <img class="first" src="assets/images/service/icon/4.png" alt="">
+                                            <img class="second" src="assets/images/service/icon/4-1.png" alt="">
+                                        </div>
+                                        <span class="nav-icon-number">04</span>
+                                    </div>
+                                    <h5 class="nav-title">2D/3D Design Layout</h5>
+                                </a>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <a class="nav-link" id="ex1-tab-5" data-bs-toggle="tab" href="#ex1-tabs-5" role="tab" aria-controls="ex1-tabs-5" aria-selected="false">
+                                    <div class="nav-icon">
+                                        <div class="nav-icon-group">
+                                            <img class="first" src="assets/images/service/icon/5.png" alt="">
+                                            <img class="second" src="assets/images/service/icon/5-1.png" alt="">
+                                        </div>
+                                        <span class="nav-icon-number">05</span>
+                                    </div>
+                                    <h5 class="nav-title">Civil Space Planning</h5>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="tab-content" id="ex1-content">
+                            <div class="tab-pane fade show active" id="ex1-tabs-1" role="tabpanel" aria-labelledby="ex1-tab-1">
+                                <div class="image-wrapper">
+                                    <div class="image-one">
+                                        <img src="assets/images/service/service-home-1-1.png" alt="">
+                                    </div>
+                                    <div class="image-content">
+                                        <div class="icon">
+                                            <img src="assets/images/service/icon/6.png" alt="">
+                                        </div>
+                                        <h3 class="title"><a href="service-details.html"> Furniture Layout</a></h3>
+                                        <p class="text">We are a creative studio specializing in design, development and strategy many different skills and disciplines in the production of all web. </p>
+                                        <!-- More Button Start -->
+                                        <a href="service-details.html" class="more-btn">
+                                            <span>Read More</span>
+                                            <img class="more-btn-icon more-btn-icon-1" src="assets/images/others/arrow-1.png" alt="">
+                                            <img class="more-btn-icon more-btn-icon-2" src="assets/images/others/arrow-2.png" alt="">
+                                        </a>
+                                        <!-- More Button End -->
+                                    </div>
                                 </div>
                             </div>
-                            <div class="swiper-button-next">
-                                <div class="next-arrow">
-                                    <img class="next-arrow-1" src="assets/images/slider/arrow-1.png" alt="">
-                                    <img class="next-arrow-2" src="assets/images/slider/arrow-2.png" alt="">
+                            <div class="tab-pane fade" id="ex1-tabs-2" role="tabpanel" aria-labelledby="ex1-tab-2">
+                                <div class="image-wrapper">
+                                    <div class="image-one">
+                                        <img src="assets/images/service/service-home-1.png" alt="">
+                                    </div>
+                                    <div class="image-content">
+                                        <div class="icon">
+                                            <img src="assets/images/service/icon/2.png" alt="">
+                                        </div>
+                                        <h3 class="title"><a href="service-details.html">Modular Kitchen</a></h3>
+                                        <p class="text">We are a creative studio specializing in design, development and strategy many different skills and disciplines in the production of all web. </p>
+                                        <!-- More Button Start -->
+                                        <a href="service-details.html" class="more-btn">
+                                            <span>Read More</span>
+                                            <img class="more-btn-icon more-btn-icon-1" src="assets/images/others/arrow-1.png" alt="">
+                                            <img class="more-btn-icon more-btn-icon-2" src="assets/images/others/arrow-2.png" alt="">
+                                        </a>
+                                        <!-- More Button End -->
+                                    </div>
                                 </div>
                             </div>
+                            <div class="tab-pane fade" id="ex1-tabs-3" role="tabpanel" aria-labelledby="ex1-tab-3">
+                                <div class="image-wrapper">
+                                    <div class="image-one">
+                                        <img src="assets/images/service/service-home-1-1.png" alt="">
+                                    </div>
+                                    <div class="image-content">
+                                        <div class="icon">
+                                            <img src="assets/images/service/icon/3.png" alt="">
+                                        </div>
+                                        <h3 class="title"><a href="service-details.html">Painting Pattern</a></h3>
+                                        <p class="text">We are a creative studio specializing in design, development and strategy many different skills and disciplines in the production of all web. </p>
+                                        <!-- More Button Start -->
+                                        <a href="service-details.html" class="more-btn">
+                                            <span>Read More</span>
+                                            <img class="more-btn-icon more-btn-icon-1" src="assets/images/others/arrow-1.png" alt="">
+                                            <img class="more-btn-icon more-btn-icon-2" src="assets/images/others/arrow-2.png" alt="">
+                                        </a>
+                                        <!-- More Button End -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="ex1-tabs-4" role="tabpanel" aria-labelledby="ex1-tab-4">
+                                <div class="image-wrapper">
+                                    <div class="image-one">
+                                        <img src="assets/images/service/service-home-1.png" alt="">
+                                    </div>
+                                    <div class="image-content">
+                                        <div class="icon">
+                                            <img src="assets/images/service/icon/4.png" alt="">
+                                        </div>
+                                        <h3 class="title"><a href="service-details.html">2D/3D Design Layout</a></h3>
+                                        <p class="text">We are a creative studio specializing in design, development and strategy many different skills and disciplines in the production of all web. </p>
+                                        <!-- More Button Start -->
+                                        <a href="service-details.html" class="more-btn">
+                                            <span>Read More</span>
+                                            <img class="more-btn-icon more-btn-icon-1" src="assets/images/others/arrow-1.png" alt="">
+                                            <img class="more-btn-icon more-btn-icon-2" src="assets/images/others/arrow-2.png" alt="">
+                                        </a>
+                                        <!-- More Button End -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="ex1-tabs-5" role="tabpanel" aria-labelledby="ex1-tab-5">
+                                <div class="image-wrapper">
+                                    <div class="image-one">
+                                        <img src="assets/images/service/service-home-1-1.png" alt="">
+                                    </div>
+                                    <div class="image-content">
+                                        <div class="icon">
+                                            <img src="assets/images/service/icon/5.png" alt="">
+                                        </div>
+                                        <h3 class="title"><a href="service-details.html">Civil Space Planning</a></h3>
+                                        <p class="text">We are a creative studio specializing in design, development and strategy many different skills and disciplines in the production of all web. </p>
+                                        <!-- More Button Start -->
+                                        <a href="service-details.html" class="more-btn">
+                                            <span>Read More</span>
+                                            <img class="more-btn-icon more-btn-icon-1" src="assets/images/others/arrow-1.png" alt="">
+                                            <img class="more-btn-icon more-btn-icon-2" src="assets/images/others/arrow-2.png" alt="">
+                                        </a>
+                                        <!-- More Button End -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Service Tab List End -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Service Section End -->
+
+    <!-- Funfact Section Start -->
+    <div class="funfact">
+        <div class="container">
+            <div class="row row-cols-lg-4 row-cols-md-4 row-cols-sm-4 row-cols-2 mb-n30">
+                <div class="col mb-30">
+                    <div class="funfact-single text-center">
+                        <div class="funfact-inner">
+                            <span class="odometer" data-count-to="580"></span>
+                        </div>
+                        <div class="funfact-content">
+                            <p class="text">Projects</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-30">
+                    <div class="funfact-single text-center">
+                        <div class="funfact-inner">
+                            <span class="odometer" data-count-to="65"></span>
+                        </div>
+                        <div class="funfact-content">
+                            <p class="text">Countries</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-30">
+                    <div class="funfact-single text-center">
+                        <div class="funfact-inner">
+                            <span class="odometer" data-count-to="76"></span>
+                        </div>
+                        <div class="funfact-content">
+                            <p class="text">Companies</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-30">
+                    <div class="funfact-single text-center">
+                        <div class="funfact-inner">
+                            <span class="odometer" data-count-to="500"></span>
+                        </div>
+                        <div class="funfact-content">
+                            <p class="text">Reviews</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
-
     </div>
-    <!-- Slider Section End -->
+    <!-- Funfact Section End -->
+
+    <!-- Image Range Start -->
+    <div class="image-range section-margin-bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="innert-cob">
+                        <div class='img background-img'>
+                            <span class="innert-cob-title right">After</span>
+                        </div>
+                        <div class='img foreground-img'>
+                            <span class="innert-cob-title left">Before</span>
+                        </div>
+                        <input type="range" min="1" max="100" value="50" class="slider-image" name='slider' id="slider-image">
+                        <div class='slider-button'></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Image Range End -->
+
+    <!-- Testimonial Section Start -->
+    <div class="testimonial section-margin-bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="testimonial-wrapper">
+                        <!-- Heading Start -->
+                        <div class="heading">
+                            <span class="subtitle">Testimonial</span>
+                            <h2 class="title">What Clients Say</h2>
+                        </div>
+                        <!-- Heading End -->
+
+                        <div class="swiper testimonial-slider">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <!--== Start Testimonial Item ==-->
+                                    <div class="testimonial-single">
+                                        <div class="testimonial-top">
+                                            <div class="testimonial-thumb">
+                                                <img src="assets/images/testimonial/1.png" alt="Testimonial-Image">
+                                            </div>
+                                            <div class="testimonial-quote">
+                                                <img src="assets/images/testimonial/quote-2.png" alt="Quote">
+                                            </div>
+                                            <p class="testimonial-text">Vitae suscipit tellus mauris a diam maecenas sed enim ut. Mauris augue neque gravida.</p>
+                                        </div>
+                                        <div class="testimonial-content">
+                                            <div class="testimonial-info">
+                                                <span class="name">John Doe</span>
+                                                <span class="designation"> Web Developer</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--== End Testimonial Item ==-->
+                                </div>
+                                <div class="swiper-slide">
+                                    <!--== Start Testimonial Item ==-->
+                                    <div class="testimonial-single">
+                                        <div class="testimonial-top">
+                                            <div class="testimonial-thumb">
+                                                <img src="assets/images/testimonial/2.png" alt="Testimonial-Image">
+                                            </div>
+                                            <div class="testimonial-quote">
+                                                <img src="assets/images/testimonial/quote-2.png" alt="Quote">
+                                            </div>
+                                            <p class="testimonial-text">Vitae suscipit tellus mauris a diam maecenas sed enim ut. Mauris augue neque gravida.</p>
+                                        </div>
+                                        <div class="testimonial-content">
+                                            <div class="testimonial-info">
+                                                <span class="name">Jack Oramson</span>
+                                                <span class="designation"> Web Developer</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--== End Testimonial Item ==-->
+                                </div>
+                                <div class="swiper-slide">
+                                    <!--== Start Testimonial Item ==-->
+                                    <div class="testimonial-single">
+                                        <div class="testimonial-top">
+                                            <div class="testimonial-thumb">
+                                                <img src="assets/images/testimonial/3.png" alt="Testimonial-Image">
+                                            </div>
+                                            <div class="testimonial-quote">
+                                                <img src="assets/images/testimonial/quote-2.png" alt="Quote">
+                                            </div>
+                                            <p class="testimonial-text">Vitae suscipit tellus mauris a diam maecenas sed enim ut. Mauris augue neque gravida.</p>
+                                        </div>
+                                        <div class="testimonial-content">
+                                            <div class="testimonial-info">
+                                                <span class="name">Jack Oramson</span>
+                                                <span class="designation"> Web Developer</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--== End Testimonial Item ==-->
+                                </div>
+                            </div>
+                            <div class="swiper-pagination testimonial-pagination"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Testimonial Section End -->
+
+    <!-- Blog Section Start -->
+    <div class="blog section-margin-bottom">
+        <div class="container">
+            <div class="row">
+                
+                <div class="col-12">
+
+                    <!-- Blog Heading Start -->
+                    <div class="blog-heading-wrapper">
+
+                        <!-- Heading Start -->
+                        <div class="heading">
+                            <span class="subtitle">News</span>
+                            <h2 class="title">Latest News.</h2>
+                        </div>
+                        <!-- Heading End -->
+
+                        <!-- More Button Start -->
+                        <a href="blog.html" class="more-btn">
+                            <span>More</span>
+                            <img class="more-btn-icon more-btn-icon-1" src="assets/images/others/arrow-1.png" alt="">
+                            <img class="more-btn-icon more-btn-icon-2" src="assets/images/others/arrow-2.png" alt="">
+                        </a>
+                        <!-- More Button End -->
+
+                    </div>
+                    <!-- Blog Heading End -->
+
+                </div>
+
+            </div>
+            <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-2 row-cols-1 mb-n30">
+                <div class="col mb-30">
+                    <!-- Blog Item Start -->
+                    <div class="blog-item">
+                        <div class="blog-thumb">
+                            <a href="blog-details.html" class="blog-thumb-link">
+                                <img src="assets/images/blog/home/1.png" alt="">
+                            </a>
+                            <div class="blog-thumb-date">
+                                <span>11 Dec, 2023</span>
+                            </div>
+                        </div>
+                        <div class="blog-content">
+                            <ul class="blog-item-category">
+                                <li><span>Design</span></li>
+                                <li><span>Photography</span></li>
+                            </ul>
+                            <h3 class="blog-item-title">
+                                <a href="blog-details.html">Creative ways to incorporate rugs into interior design.</a>
+                            </h3>
+                        </div>
+                    </div>
+                    <!-- Blog Item End -->
+                </div>
+                <div class="col mb-30">
+                    <!-- Blog Item Start -->
+                    <div class="blog-item">
+                        <div class="blog-thumb">
+                            <a href="blog-details.html" class="blog-thumb-link">
+                                <img src="assets/images/blog/home/2.png" alt="">
+                            </a>
+                            <div class="blog-thumb-date">
+                                <span>22 Nov, 2023</span>
+                            </div>
+                        </div>
+                        <div class="blog-content">
+                            <ul class="blog-item-category">
+                                <li><span>Design</span></li>
+                                <li><span>Photography</span></li>
+                            </ul>
+                            <h3 class="blog-item-title">
+                                <a href="blog-details.html">Using lighting for impactful design expression.</a>
+                            </h3>
+                        </div>
+                    </div>
+                    <!-- Blog Item End -->
+                </div>
+                <div class="col mb-30">
+                    <!-- Blog Item Start -->
+                    <div class="blog-item">
+                        <div class="blog-thumb">
+                            <a href="blog-details.html" class="blog-thumb-link">
+                                <img src="assets/images/blog/home/3.png" alt="">
+                            </a>
+                            <div class="blog-thumb-date">
+                                <span>16 Dec, 2023</span>
+                            </div>
+                        </div>
+                        <div class="blog-content">
+                            <ul class="blog-item-category">
+                                <li><span>Design</span></li>
+                                <li><span>Photography</span></li>
+                            </ul>
+                            <h3 class="blog-item-title">
+                                <a href="blog-details.html">Principles of design for compact living areas.</a>
+                            </h3>
+                        </div>
+                    </div>
+                    <!-- Blog Item End -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Blog Section End -->
+
+    <!-- Footer Start -->
+    <div class="footer section-padding-top">
+        <div class="container">
+            <div class="row mb-n30">
+                <div class="col-lg-3 col-md-3 col-sm-6 col-12 mb-30">
+                    <!-- Footer Widget Start -->
+                    <div class="footer-widget">
+                        <h4 class="title">Say Hello</h4>
+                        <div class="footer-widget-hello">
+                            <a class="mail" href="mailto:hello@rosinter.com">hello@rosinter.com</a>
+                            <a class="call" href="tel:1234567890">+012 3456 789</a>
+                        </div>
+                    </div>
+                    <!-- Footer Widget End -->
+                </div>
+                <div class="col-lg-2 col-md-2 col-sm-3 col-6 mb-30">
+                    <!-- Footer Widget Start -->
+                    <div class="footer-widget">
+                        <h4 class="title">Menu</h4>
+                        <ul class="footer-widget-menu">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="service.html">Service</a></li>
+                            <li><a href="project.html">Project</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <!-- Footer Widget End -->
+                </div>
+                <div class="col-lg-2 col-md-2 col-sm-3 col-6 mb-30">
+                    <!-- Footer Widget Start -->
+                    <div class="footer-widget">
+                        <h4 class="title">Social</h4>
+                        <ul class="footer-widget-menu">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="service.html">Service</a></li>
+                            <li><a href="project.html">Project</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <!-- Footer Widget End -->
+                </div>
+                <div class="col-lg-5 col-md-5 col-sm-12 col-12 mb-30">
+                    <!-- Footer Widget Start -->
+                    <div class="footer-widget">
+                        <h4 class="title">Address</h4>
+                        <div class="footer-widget-address">
+                            <p>123 Fake Street, London, Greater London, NW1 2AB, UK</p>
+
+                            <div class="footer-widget-form-wrapper">
+                                <!-- Subscription Form Start -->
+                                <form id="mc-form" class="subscribe-form" action="#">
+                                    <input class="email" type="email" placeholder="Your email here" name="EMAIL">
+                                    <button class="button"><img src="assets/images/others/arrow-3.png" alt=""></button>
+                                </form>
+                                <!-- Subscription Form End -->
+                                <!-- mailchimp-alerts Start -->
+                                <div class="mailchimp-alerts text-centre">
+                                    <div class="mailchimp-submitting"></div><!-- mailchimp-submitting end -->
+                                    <div class="mailchimp-success text-green-400"></div><!-- mailchimp-success end -->
+                                    <div class="mailchimp-error text-red-600"></div><!-- mailchimp-error end -->
+                                </div>
+                                <!-- mailchimp-alerts end -->
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Footer Widget End -->
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="footer-bottom">
+                        <div class="logo">
+                            <img src="assets/images/logo-white.png" alt="">
+                        </div>
+                        <p class="copyright-line">© 2023 Rosinter is Proudly Powered by Coderspoint.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
 
     @@include('top.html')
 
